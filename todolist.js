@@ -15,11 +15,11 @@ let addTask = ()=>{
 
     list.innerHTML += `
     <div class="task-container" id="${IdCounter}">
-    <label>
-        <input type="checkbox">
-        ${newValue}
-    </label>
-    <img src="/images/close.png" alt="close" class="closeBtn">
+        <label>
+            <input type="checkbox">
+            ${newValue}
+        </label>
+        <img src="/images/close.png" alt="close" class="closeBtn">
     </div>
     `
     input.value = '';
@@ -29,7 +29,7 @@ let addTask = ()=>{
 list.addEventListener('click', (event)=>{
     if(event.srcElement.nodeName == 'INPUT'){
         updateStats();
-    }else if(event.srcElement.nodeName == 'INPUT'){
+    }else if(event.srcElement.nodeName == 'IMG'){
         deleteTask(event.srcElement.parentNode.id);
     }
 });
